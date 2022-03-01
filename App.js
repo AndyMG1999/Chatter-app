@@ -9,6 +9,7 @@ import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
   const [showPost,setShowPost] = useState(false);
+  const [showSidebar,setShowSidebar] = useState(false);
   const [currentMainComment, setCurrentMainComment] = useState({});
   const [showReplies,setShowReplies] = useState(false);
   const [currentPost,setCurrentPost] = useState([]);
@@ -38,6 +39,11 @@ export default function App() {
     setShowPost(false);
     setShowReplies(false);
   }
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  }
+
   return (
     <View style={styles.container}>
       <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies}/>
