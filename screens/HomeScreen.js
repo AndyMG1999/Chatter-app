@@ -1,4 +1,4 @@
-import {StyleSheet,View,Text,TouchableHighlight} from 'react-native';
+import {StyleSheet,View} from 'react-native';
 
 import Header from '../components/Header';
 import FeedList from '../components/FeedList';
