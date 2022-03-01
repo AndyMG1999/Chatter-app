@@ -4,6 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import { postData,commentsData } from './Data';
 import { useState } from 'react';
 
+import Header from './components/Header';
 import HomeScreen from './screens/HomeScreen';
 import Sidebar from './components/Sidebar';
 
@@ -47,6 +48,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
+      <Header showPost={showPost} closePost={closePost} toggleSidebar={toggleSidebar}/>
       <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies} toggleSidebar={toggleSidebar}/>
       <StatusBar style="auto" />
     </View>

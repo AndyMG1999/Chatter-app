@@ -7,7 +7,6 @@ import PostScreen from './PostScreen';
 const HomeScreen = ({showPost,data,getPostInfo,currentPost,currentComments,closePost,currentMainComment,currentReplies,getReplies,showReplies,closeReplies,toggleSidebar}) => {    
     return(
         <View style={styles.screen}>
-            <Header showPost={showPost} closePost={closePost} toggleSidebar={toggleSidebar}/>
             <FeedList data={data} getPostInfo={getPostInfo}/>
             <PostScreen showPost={showPost} currentPost={currentPost} currentComments={currentComments} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies}/>
         </View>
