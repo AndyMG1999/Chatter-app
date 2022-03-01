@@ -1,12 +1,12 @@
 import {StyleSheet,View,Text,TouchableOpacity} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Header = ({showPost,closePost}) => {
+const Header = ({showPost,closePost,toggleSidebar}) => {
     const returnHeaderType = () => {
         if(showPost === false){
             return(
             <View style={styles.header}>
-                <TouchableOpacity onPress={()=>{}}><Text style={styles.headerBtnText}>=</Text></TouchableOpacity>
+                <TouchableOpacity onPress={()=>{toggleSidebar()}}><Text style={styles.headerBtnText}>=</Text></TouchableOpacity>
                 <Text style={styles.headerLogo}>Chatter</Text>
                 <TouchableOpacity><Text style={styles.headerBtnText}>{'>'}</Text></TouchableOpacity>
             </View>
