@@ -5,7 +5,7 @@ import { postData,commentsData } from './Data';
 import { useState } from 'react';
 
 import HomeScreen from './screens/HomeScreen';
-
+import Sidebar from './components/Sidebar';
 
 export default function App() {
   const [showPost,setShowPost] = useState(false);
@@ -46,6 +46,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Sidebar />
       <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies}/>
       <StatusBar style="auto" />
     </View>

@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         
         marginTop: 20,
-        backgroundColor: 'rgb(82, 132, 161)'
+        backgroundColor: 'rgb(82, 132, 161)',
     },
     noCommentsText: {
         fontSize: 18,
