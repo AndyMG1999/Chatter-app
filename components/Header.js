@@ -7,7 +7,7 @@ const Header = ({showPost,closePost,toggleSidebar}) => {
             return(
             <View style={styles.header}>
                 <TouchableOpacity onPress={()=>{toggleSidebar()}}><Text style={styles.headerBtnText}>=</Text></TouchableOpacity>
-                <Text style={styles.headerLogo}>Chatter</Text>
+                <MaterialCommunityIcons size={55} name='emoticon-lol-outline' color={'white'} />
                 <TouchableOpacity><Text style={styles.headerBtnText}>{'>'}</Text></TouchableOpacity>
             </View>
             )
