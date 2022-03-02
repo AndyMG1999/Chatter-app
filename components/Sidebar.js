@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,0.2)',
     },
     sidebarContainer: {
-        width: '65%',
+        width: '75%',
         height: '100%',
         paddingTop: '10%',
         
