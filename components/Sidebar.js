@@ -1,5 +1,7 @@
-import { StyleSheet,Modal,View,Text,TouchableOpacity,TouchableHighlight } from "react-native";
+import { StyleSheet,Modal,View,Text,TouchableHighlight } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
+import SidebarHeader from "./SidebarHeader";
 
 const Sidebar = ({showSidebar,toggleSidebar}) => {
     const iconSize = 50;
@@ -7,11 +9,10 @@ const Sidebar = ({showSidebar,toggleSidebar}) => {
     return(
         <Modal visible={showSidebar} transparent={true} animationType={'fade'}>
         <View style={styles.container}>
+            
             <View style={styles.sidebarContainer}>
-            <View style={{flexDirection:'row',justifyContent:'flex-end'}}><TouchableOpacity onPress={()=>toggleSidebar()}><MaterialCommunityIcons name='close' size={iconSize} color='white' /></TouchableOpacity></View>
-                <Text style={styles.sidebarTitleText}>chatter</Text>
+                <SidebarHeader toggleSidebar={toggleSidebar}/>
                 <TouchableHighlight onPress={()=>{}} underlayColor={'rgba(0,0,0,0.4)'}><View style={styles.sidebarButtonContainer}><MaterialCommunityIcons name='home-account' size={iconSize} color='white' /><Text style={styles.sidebarButtonText}>home</Text></View></TouchableHighlight>
-                <TouchableHighlight onPress={()=>{}} underlayColor={'rgba(0,0,0,0.4)'}><View style={styles.sidebarButtonContainer}><MaterialCommunityIcons name='account' size={iconSize} color='white' /><Text style={styles.sidebarButtonText}>profile</Text></View></TouchableHighlight>
                 <TouchableHighlight onPress={()=>{}} underlayColor={'rgba(0,0,0,0.4)'}><View style={styles.sidebarButtonContainer}><MaterialCommunityIcons name='account-group' size={iconSize} color='white' /><Text style={styles.sidebarButtonText}>groups</Text></View></TouchableHighlight>
                 <TouchableHighlight onPress={()=>{}} underlayColor={'rgba(0,0,0,0.4)'}><View style={styles.sidebarButtonContainer}><MaterialCommunityIcons name='cog' size={iconSize} color='white' /><Text style={styles.sidebarButtonText}>settings</Text></View></TouchableHighlight>
                 <TouchableHighlight onPress={()=>{}} underlayColor={'rgba(0,0,0,0.4)'}><View style={styles.sidebarButtonContainer}><MaterialCommunityIcons name='emoticon-excited' size={iconSize} color='white' /><Text style={styles.sidebarButtonText}>sign-in</Text></View></TouchableHighlight>                
@@ -29,7 +30,6 @@ const styles = StyleSheet.create({
     sidebarContainer: {
         width: '75%',
         height: '100%',
-        paddingTop: '10%',
         
         borderRightWidth: 2,
         borderColor: 'white',
@@ -45,16 +45,9 @@ const styles = StyleSheet.create({
     },
     sidebarButtonText: {
         fontSize: 35,
-        fontWeight: 'bold',
 
         color: 'white',
     },
-    sidebarTitleText: {
-        fontSize: 50,
-        paddingBottom: 40,
-        textAlign: 'center',
-        color: 'white',
-    }
 })
 
 export default Sidebar;
