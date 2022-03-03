@@ -3,7 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const SidebarHeader = ({toggleSidebar}) => {
-    const iconSize = 50;
+    const iconSize = 60;
 
     return (
         <LinearGradient
@@ -13,7 +13,7 @@ const SidebarHeader = ({toggleSidebar}) => {
         end={{x:1,y:1}}
         >
             <View style={styles.sidebarHeader}>
-                <View style={{flexDirection:'row',justifyContent:'flex-end'}}><TouchableOpacity onPress={()=>toggleSidebar()}><MaterialCommunityIcons name='close' size={iconSize} color='white' /></TouchableOpacity></View>
+                <View style={{flexDirection:'row',justifyContent:'flex-end'}}><TouchableOpacity onPress={()=>toggleSidebar()}><MaterialCommunityIcons name='chevron-left' size={iconSize} color='white' /></TouchableOpacity></View>
                 <View style={{flexDirection:'row',alignItems:'baseline'}}>
                 <View style={styles.userIconBackground}><TouchableOpacity><Image resizeMode='cover' style={styles.profileImage} source={{uri:'https://cdn.landesa.org/wp-content/uploads/default-user-image.png'}} /></TouchableOpacity></View>
                 <Text style={styles.sidebarTitleText}>Guest</Text>
@@ -25,7 +25,7 @@ const SidebarHeader = ({toggleSidebar}) => {
 
 const styles = StyleSheet.create({
     sidebarHeader: {
-        paddingTop: '10%',
+        paddingTop: '5%',
         borderColor: 'white',
         borderBottomWidth: 3,
     },

@@ -6,16 +6,16 @@ const Header = ({showPost,closePost,toggleSidebar}) => {
         if(showPost === false){
             return(
             <View style={styles.header}>
-                <TouchableOpacity onPress={()=>{toggleSidebar()}}><Text style={styles.headerBtnText}>=</Text></TouchableOpacity>
+                <TouchableOpacity onPress={()=>{toggleSidebar()}}><MaterialCommunityIcons size={55} name='equal' color={'white'} /></TouchableOpacity>
                 <MaterialCommunityIcons size={55} name='emoticon-lol-outline' color={'white'} />
-                <TouchableOpacity><Text style={styles.headerBtnText}>{'>'}</Text></TouchableOpacity>
+                <TouchableOpacity><MaterialCommunityIcons name='dots-horizontal' size={55} color={'white'} /></TouchableOpacity>
             </View>
             )
         }
         else if(showPost === true){
             return(
             <View style={styles.header}>
-                <TouchableOpacity onPress={()=>{closePost()}}><MaterialCommunityIcons name='arrow-left' size={40} color='white' /></TouchableOpacity>
+                <TouchableOpacity onPress={()=>{closePost()}}><MaterialCommunityIcons name='chevron-left' size={60} color='white' /></TouchableOpacity>
             </View>
             )
         }

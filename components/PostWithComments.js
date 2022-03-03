@@ -30,7 +30,7 @@ const PostWithComments = ({currentPost,currentComments,currentMainComment,curren
             <Modal transparent={true} animationType='fade'>
                 <View style={{flex:1,backgroundColor:'rgba(0,0,0,0.5)'}}>
                 <View style={styles.commentList}>
-                <TouchableOpacity onPress={()=>closeReplies()}><MaterialCommunityIcons name='arrow-left' size={40} color='white' /></TouchableOpacity>
+                <TouchableOpacity onPress={()=>closeReplies()}><MaterialCommunityIcons name='chevron-left' size={50} color='white' /></TouchableOpacity>
                 <FlatList 
                 data={currentReplies}
                 ListHeaderComponent={()=><Post currentPost={[{postedBy: currentMainComment.postedBy, postDetails: currentMainComment.comment}]} />}
