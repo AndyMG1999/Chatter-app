@@ -1,4 +1,4 @@
-import {StyleSheet,View,Text,Image} from 'react-native';
+import {StyleSheet,View,Text,Image,TouchableOpacity} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const Post = ({currentPost}) => {
@@ -14,9 +14,9 @@ const Post = ({currentPost}) => {
             <View style={styles.likeCommentContainer}>
             <View style={styles.likeCommentContainer}>
             <Text style={styles.postSubtitle}>{numberOfLikes}</Text>
-            <MaterialCommunityIcons name='heart-outline' size={30} color='white' />
+            <TouchableOpacity><MaterialCommunityIcons name='heart-outline' size={30} color='white' /></TouchableOpacity>
             </View>
-            <MaterialCommunityIcons name='comment-text-outline' size={30} color='white' />
+            <TouchableOpacity><MaterialCommunityIcons name='comment-text-outline' size={30} color='white' /></TouchableOpacity>
             </View>
         </View>
     )

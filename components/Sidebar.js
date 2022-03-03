@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
 
         paddingLeft: 20,
-        paddingVertical: 10,
+        paddingVertical: 14,
     },
     sidebarButtonText: {
         fontSize: 35,
