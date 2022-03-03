@@ -114,6 +114,7 @@ const groupsData = [
         groupDescription: 'The Official Channel of Chatter! Make yourself at home.',
         groupProfilePictureUri: '',
         groupBannerUri: '',
+        groupFollowers: 457472,
     },
     {
         id: 2,
@@ -121,6 +122,7 @@ const groupsData = [
         groupDescription: 'We do SCIENCE on the COMPUTER',
         groupProfilePictureUri: '',
         groupBannerUri: '',
+        groupFollowers: 1503,
     },
     {
         id: 3,
@@ -128,6 +130,7 @@ const groupsData = [
         groupDescription: 'Obgligatory Gaming Channel',
         groupProfilePictureUri: '',
         groupBannerUri: '',
+        groupFollowers: 1037092,
     },
 ];
 
