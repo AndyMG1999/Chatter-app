@@ -107,4 +107,28 @@ const commentsData = [
     },
 ];
 
-export {postData,commentsData};
+const groupsData = [
+    {
+        id: 1,
+        groupName: 'Chatter',
+        groupDescription: 'The Official Channel of Chatter! Make yourself at home.',
+        groupProfilePictureUri: '',
+        groupBannerUri: '',
+    },
+    {
+        id: 2,
+        groupName: 'Computer Science',
+        groupDescription: 'We do SCIENCE on the COMPUTER',
+        groupProfilePictureUri: '',
+        groupBannerUri: '',
+    },
+    {
+        id: 3,
+        groupName: 'Chatter Gaming',
+        groupDescription: 'Obgligatory Gaming Channel',
+        groupProfilePictureUri: '',
+        groupBannerUri: '',
+    },
+];
+
+export {postData,commentsData,groupsData};

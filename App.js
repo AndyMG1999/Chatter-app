@@ -5,8 +5,9 @@ import { postData,commentsData } from './Data';
 import { useState } from 'react';
 
 import Header from './components/Header';
-import HomeScreen from './screens/HomeScreen';
 import Sidebar from './components/Sidebar';
+import HomeScreen from './screens/HomeScreen';
+import GroupsScreen from './screens/GroupsScreen';
 
 export default function App() {
   const [showPost,setShowPost] = useState(false);
@@ -49,7 +50,8 @@ export default function App() {
     <View style={styles.container}>
       <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       <Header showPost={showPost} closePost={closePost} toggleSidebar={toggleSidebar}/>
-      <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies} toggleSidebar={toggleSidebar}/>
+      {/* <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies} toggleSidebar={toggleSidebar}/> */}
+      <GroupsScreen />
       <StatusBar style="auto" />
     </View>
   );

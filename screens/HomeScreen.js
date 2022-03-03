@@ -1,6 +1,5 @@
 import {StyleSheet,View} from 'react-native';
 
-import Header from '../components/Header';
 import FeedList from '../components/FeedList';
 import PostScreen from './PostScreen';
 
