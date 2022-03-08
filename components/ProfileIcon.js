@@ -3,6 +3,7 @@ import { StyleSheet,View,Image,TouchableOpacity } from "react-native";
 const ProfileIcon = ({iconSize}) => {
     const styles = StyleSheet.create({
         userIconBackground: {
+            alignSelf: 'baseline',
             borderRadius: iconSize,
             borderWidth: 3,
             borderColor: 'grey',
