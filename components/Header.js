@@ -1,6 +1,7 @@
 import {StyleSheet,View,Text,TouchableOpacity} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import ProfileIcon from './ProfileIcon';
 import { useGlobalContext } from '../context/context';
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
             <View style={styles.header}>
                 <TouchableOpacity onPress={()=>{toggleSidebar()}}><MaterialCommunityIcons size={55} name='equal' color={'white'} /></TouchableOpacity>
                 <MaterialCommunityIcons size={55} name='emoticon-lol-outline' color={'white'} />
-                <TouchableOpacity><MaterialCommunityIcons name='dots-horizontal' size={55} color={'white'} /></TouchableOpacity>
+                <ProfileIcon iconSize={40} isSidebar={false} />
             </View>
             )
         }

@@ -9,7 +9,7 @@ const ProfileScreen = () => {
             <ScrollView>
             <Text style={styles.profileLabelText}>My Profile</Text>
             <View style={styles.profileHeader}>
-                <ProfileIcon iconSize={90}/>
+                <ProfileIcon iconSize={90} isSidebar={false}/>
                 <Text style={styles.profileHeaderText}>Guest</Text>
             </View>
             </ScrollView>

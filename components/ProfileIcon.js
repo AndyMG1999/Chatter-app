@@ -2,7 +2,7 @@ import { StyleSheet,View,Image,TouchableOpacity } from "react-native";
 
 import { useGlobalContext } from "../context/context";
 
-const ProfileIcon = ({iconSize}) => {
+const ProfileIcon = ({iconSize,isSidebar}) => {
     const styles = StyleSheet.create({
         userIconBackground: {
             alignSelf: 'baseline',
@@ -23,7 +23,7 @@ const ProfileIcon = ({iconSize}) => {
 
     return(
         <View style={styles.userIconBackground}>
-            <TouchableOpacity onPress={()=>{switchToProfile()}}>
+            <TouchableOpacity onPress={()=>{switchToProfile(isSidebar)}}>
                 <Image resizeMode='cover' style={styles.profileImage} source={{uri:'https://cdn.landesa.org/wp-content/uploads/default-user-image.png'}} />
             </TouchableOpacity>
         </View>

@@ -50,9 +50,9 @@ const AppProvider = ({children}) => {
       toggleSidebar();
   }
 
-  const switchToProfile = () => {
-      setCurrentPage('PROFILE');
-      toggleSidebar()
+  const switchToProfile = (isSidebar = true) => {
+    setCurrentPage('PROFILE');
+    if(isSidebar) toggleSidebar();
   }
 
   const switchToGroups = () => {
