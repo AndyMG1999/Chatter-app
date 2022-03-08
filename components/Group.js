@@ -1,4 +1,5 @@
 import {StyleSheet,View,Text,Image,ImageBackground,TouchableOpacity} from 'react-native';
+import { Dimensions } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const Group = ({id,groupName,groupDescription,groupProfilePictureUri,groupBannerUri,groupFollowers}) => {
@@ -18,14 +19,14 @@ const Group = ({id,groupName,groupDescription,groupProfilePictureUri,groupBanner
     return (
     <View style={styles.group}>
         <TouchableOpacity onPress={()=>{}}>
-            <ImageBackground style={styles.groupBanner} source={{uri:'http://images6.fanpop.com/image/photos/39600000/Sparkle-Stars-Profile-Banner-smile19-39654242-946-250.jpg'}} resizeMode='cover' >
-            <View>
-            <Text style={styles.groupTitle}>12.7K Chatters</Text>
+            <ImageBackground style={styles.groupBanner} imageStyle={styles.groupBanner} source={{uri:groupBannerUri}} resizeMode='cover' >
+            <View style={styles.groupBannerView}>
+            <Text style={styles.groupTitle}>{simplifyNumber(groupFollowers)} Chatters</Text>
+            <TouchableOpacity onPress={()=>{}}><MaterialCommunityIcons name='plus' size={50} color='white' /></TouchableOpacity>
             </View>
             </ImageBackground>
-            
-            <Text style={styles.groupTitle}>Title</Text>
-            <Text style={styles.groupDetails}>This is a test group description.</Text>
+            <Text style={styles.groupTitle}>{groupName}</Text>
+            <Text style={styles.groupDetails}>{groupDescription}</Text>
         </TouchableOpacity>
     </View>
     )
@@ -53,18 +54,25 @@ const styles = StyleSheet.create({
     groupTitle:{
         fontSize: 35,
         paddingLeft: 5,
+        paddingTop: 5,
         fontWeight: 'bold',
         color: 'rgba(255,255,255,0.95)',
     },
     groupBanner:{
         width:'100%',
-        height: 100,
+        height: 120,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
+    },
+    groupBannerView:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 2,
     },
     groupDetails:{
         fontSize: 20,
         paddingLeft: 5,
+        paddingTop: 5,
         color: 'rgba(255,255,255,0.9)',
     },
 });

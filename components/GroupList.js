@@ -9,7 +9,8 @@ const GroupList = ({groupData}) => {
     
     return (
         <View style={styles.FeedList}>
-            <Group />
+            <Group groupName={'Group Title'} groupDescription={'This is a test group description.'} groupFollowers={12724} groupBannerUri={'http://images6.fanpop.com/image/photos/39600000/Sparkle-Stars-Profile-Banner-smile19-39654242-946-250.jpg'}/>
+            <Group groupName={'Group Title'} groupDescription={'This is a test group description.'} groupFollowers={12724} groupBannerUri={'https://ze-robot.com/images/source/28715.jpg'}/>
         </View>
     )
 }

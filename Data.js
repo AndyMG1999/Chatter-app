@@ -113,7 +113,7 @@ const groupsData = [
         groupName: 'Chatter',
         groupDescription: 'The Official Channel of Chatter! Make yourself at home.',
         groupProfilePictureUri: '',
-        groupBannerUri: '',
+        groupBannerUri: 'https://t4.ftcdn.net/jpg/03/16/92/61/360_F_316926143_cVdnI6bJPbhlo1yZVTJk0R0sjBx4vVnO.jpg',
         groupFollowers: 457472,
     },
     {
@@ -121,7 +121,7 @@ const groupsData = [
         groupName: 'Computer Science',
         groupDescription: 'We do SCIENCE on the COMPUTER',
         groupProfilePictureUri: '',
-        groupBannerUri: '',
+        groupBannerUri: 'https://png.pngtree.com/thumb_back/fh260/background/20201020/pngtree-vector-abstract-futuristic-digital-landscape-with-particles-dots-and-stars-on-image_427221.jpg',
         groupFollowers: 1503,
     },
     {
@@ -129,7 +129,7 @@ const groupsData = [
         groupName: 'Chatter Gaming',
         groupDescription: 'Obgligatory Gaming Channel',
         groupProfilePictureUri: '',
-        groupBannerUri: '',
+        groupBannerUri: 'https://ze-robot.com/images/source/28715.jpg',
         groupFollowers: 1037092,
     },
 ];
