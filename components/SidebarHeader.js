@@ -2,6 +2,8 @@ import {View,Text,StyleSheet,TouchableOpacity,Image} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
+import ProfileIcon from './ProfileIcon';
+
 const SidebarHeader = ({toggleSidebar}) => {
     const iconSize = 60;
 
@@ -15,7 +17,7 @@ const SidebarHeader = ({toggleSidebar}) => {
             <View style={styles.sidebarHeader}>
                 <View style={{flexDirection:'row',justifyContent:'flex-end'}}><TouchableOpacity onPress={()=>toggleSidebar()}><MaterialCommunityIcons name='chevron-left' size={iconSize} color='white' /></TouchableOpacity></View>
                 <View style={{flexDirection:'row',alignItems:'baseline'}}>
-                <View style={styles.userIconBackground}><TouchableOpacity><Image resizeMode='cover' style={styles.profileImage} source={{uri:'https://cdn.landesa.org/wp-content/uploads/default-user-image.png'}} /></TouchableOpacity></View>
+                <ProfileIcon iconSize={70}/>
                 <Text style={styles.sidebarTitleText}>Guest</Text>
                 </View>
             </View>
@@ -34,18 +36,6 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
         fontWeight: 'bold',
         color: 'white',
-    },
-    userIconBackground: {
-        borderRadius: 40,
-        borderWidth: 4,
-        borderColor: 'grey',
-        margin: 6,
-        backgroundColor: 'grey',
-    },
-    profileImage: {
-        width: 70,
-        height: 70,
-        borderRadius: 40,
     },
 })
 

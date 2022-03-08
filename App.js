@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import HomeScreen from './screens/HomeScreen';
 import GroupsScreen from './screens/GroupsScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 export default function App() {
   const [showPost,setShowPost] = useState(false);
@@ -51,7 +52,8 @@ export default function App() {
       <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       <Header showPost={showPost} closePost={closePost} toggleSidebar={toggleSidebar}/>
       {/* <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies} toggleSidebar={toggleSidebar}/> */}
-      <GroupsScreen groupData={groupsData}/>
+      {/* <GroupsScreen groupData={groupsData}/> */}
+      <ProfileScreen />
       <StatusBar style="auto" />
     </View>
   );
