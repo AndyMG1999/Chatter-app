@@ -1,5 +1,4 @@
-import {StyleSheet,View,Text,Image,ImageBackground,TouchableOpacity} from 'react-native';
-import { Dimensions } from 'react-native'
+import {StyleSheet,View,Text,ImageBackground,TouchableOpacity} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const Group = ({id,groupName,groupDescription,groupProfilePictureUri,groupBannerUri,groupFollowers}) => {

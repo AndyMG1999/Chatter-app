@@ -1,4 +1,3 @@
-
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { postData,commentsData,groupsData } from './Data';
@@ -11,9 +10,10 @@ import GroupsScreen from './screens/GroupsScreen';
 
 export default function App() {
   const [showPost,setShowPost] = useState(false);
-  const [showSidebar,setShowSidebar] = useState(false);
-  const [currentMainComment, setCurrentMainComment] = useState({});
   const [showReplies,setShowReplies] = useState(false);
+  const [showSidebar,setShowSidebar] = useState(false);
+
+  const [currentMainComment, setCurrentMainComment] = useState({});
   const [currentPost,setCurrentPost] = useState([]);
   const [currentComments,setCurrentComments] = useState([]);
   const [currentReplies,setCurrentReplies] = useState([]);
