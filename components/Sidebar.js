@@ -2,10 +2,11 @@ import { StyleSheet,Modal,View,Text,TouchableHighlight } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import SidebarHeader from "./SidebarHeader";
-
-const Sidebar = ({showSidebar,toggleSidebar}) => {
+import { useGlobalContext } from "../context/context";
+const Sidebar = () => {
     const iconSize = 50;
-    
+    const {showSidebar,toggleSidebar} = useGlobalContext();
+
     return(
         <Modal visible={showSidebar} transparent={true} animationType={'fade'}>
         <View style={styles.container}>

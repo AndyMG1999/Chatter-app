@@ -1,11 +1,13 @@
 import {StyleSheet,View,Text} from 'react-native';
 
 import GroupList from '../components/GroupList';
+import { useGlobalContext } from '../context/context';
 
-const GroupsScreen = ({groupData}) => {
+const GroupsScreen = () => {
+    const {groupsData} = useGlobalContext();
     return (
         <View style={styles.screen}>
-            <GroupList groupData={groupData}/>
+            <GroupList groupData={groupsData}/>
         </View>
     );
 };

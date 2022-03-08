@@ -1,7 +1,11 @@
 import {StyleSheet,View,Text,TouchableOpacity} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Header = ({showPost,closePost,toggleSidebar}) => {
+import { useGlobalContext } from '../context/context';
+
+const Header = () => {
+    const {showPost,closePost,toggleSidebar} = useGlobalContext();
+    
     const returnHeaderType = () => {
         if(showPost === false){
             return(
