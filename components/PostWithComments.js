@@ -11,7 +11,6 @@ const PostWithComments = ({currentPost,currentComments,currentMainComment,curren
 
     const getNumberOfReplies = (id) => {
         const numberOfReplies = currentComments.filter((comment)=>comment.replyingTo === id).length;
-        console.log('number of replies: ',numberOfReplies);
         return numberOfReplies;
     }
 
