@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
         paddingTop: 5,
         fontWeight: 'bold',
-        color: 'rgba(255,255,255,0.95)',
+        color: 'white',
     },
     groupBanner:{
         width:'100%',

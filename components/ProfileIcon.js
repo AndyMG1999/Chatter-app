@@ -1,5 +1,7 @@
 import { StyleSheet,View,Image,TouchableOpacity } from "react-native";
 
+import { useGlobalContext } from "../context/context";
+
 const ProfileIcon = ({iconSize}) => {
     const styles = StyleSheet.create({
         userIconBackground: {
@@ -17,9 +19,11 @@ const ProfileIcon = ({iconSize}) => {
         },
     })
 
+    const {switchToProfile} = useGlobalContext();
+
     return(
         <View style={styles.userIconBackground}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{switchToProfile()}}>
                 <Image resizeMode='cover' style={styles.profileImage} source={{uri:'https://cdn.landesa.org/wp-content/uploads/default-user-image.png'}} />
             </TouchableOpacity>
         </View>

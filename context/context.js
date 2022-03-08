@@ -45,6 +45,26 @@ const AppProvider = ({children}) => {
     setShowSidebar(!showSidebar);
   }
 
+  const switchToHome = () => {
+      setCurrentPage('HOME');
+      toggleSidebar();
+  }
+
+  const switchToProfile = () => {
+      setCurrentPage('PROFILE');
+      toggleSidebar()
+  }
+
+  const switchToGroups = () => {
+      setCurrentPage('GROUPS');
+      toggleSidebar();
+  }
+
+  const switchToSetting = () => {
+      setCurrentPage('SIGN-IN');
+      toggleSidebar();
+  }
+
   return (
     <AppContext.Provider value={{
         showSidebar,
@@ -63,6 +83,10 @@ const AppProvider = ({children}) => {
         showReplies,
         closeReplies,
         toggleSidebar,
+        currentPage,
+        switchToHome,
+        switchToProfile,
+        switchToGroups,
     }}>{children}</AppContext.Provider>
   );
 };
