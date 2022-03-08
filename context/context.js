@@ -65,6 +65,11 @@ const AppProvider = ({children}) => {
       toggleSidebar();
   }
 
+  const switchToSignin = () => {
+      setCurrentPage('SIGNIN');
+      toggleSidebar();
+  }
+
   return (
     <AppContext.Provider value={{
         showSidebar,
@@ -87,6 +92,7 @@ const AppProvider = ({children}) => {
         switchToHome,
         switchToProfile,
         switchToGroups,
+        switchToSignin,
     }}>{children}</AppContext.Provider>
   );
 };
