@@ -1,6 +1,5 @@
-import {StyleSheet,View,Text,TextInput,TouchableOpacity} from "react-native";
+import {StyleSheet,View,Text,TextInput,TouchableOpacity,TouchableHighlight} from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const SigninScreen = () => {
     return(
@@ -10,9 +9,9 @@ const SigninScreen = () => {
                     <MaterialCommunityIcons name='emoticon-lol' size={90} color='rgb(255, 196, 20)' />
                     <Text style={styles.signinText}>chatter</Text>
                 </View>
-                <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="email" />
-                <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="password"/>
-                <View style={styles.signinButtonContainer}><Text style={styles.signinButtonText}>Sign In</Text></View>
+                <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="email" keyboardType='email-address' returnKeyType='next' />
+                <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="password" secureTextEntry={true} returnKeyType='go' />
+                <View style={styles.signinButtonContainer}><TouchableOpacity onPress={()=>{}}><Text style={styles.signinButtonText}>Let's Go!</Text></TouchableOpacity></View>
                 <TouchableOpacity><View><Text style={styles.signupButtonText}>Don't have an account? Tap here!</Text></View></TouchableOpacity>
             </View>
         </View>
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
         color: 'white',
     },
     signinButtonContainer:{
-        width: '60%',
+        width: '80%',
         alignItems: 'center',
         
         marginVertical: 30,
@@ -63,11 +62,14 @@ const styles = StyleSheet.create({
     },
     signinButtonText:{
         fontSize: 40,
-        color: 'white'
+        color: 'white',
     },
     signupButtonText: {
         fontSize: 25,
-        color: 'rgba(181, 238, 255,1)'
+        fontWeight: 'bold',
+        borderBottomWidth: 3,
+        borderBottomColor: 'rgba(131, 238, 255,1)',
+        color: 'rgba(131, 238, 255,1)',
     },
 })
 

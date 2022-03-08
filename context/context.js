@@ -6,6 +6,8 @@ import { postData,commentsData,groupsData } from '../Data';
 const AppContext = React.createContext();
 const AppProvider = ({children}) => {
   // useState where data will be stored
+  const [username,setUsername] = useState('');
+
   const [showPost,setShowPost] = useState(false);
   const [showReplies,setShowReplies] = useState(false);
   const [showSidebar,setShowSidebar] = useState(false);
@@ -51,6 +53,7 @@ const AppProvider = ({children}) => {
   }
 
   const switchToProfile = (isSidebar = true) => {
+    if(username == '') return;
     setCurrentPage('PROFILE');
     if(isSidebar) toggleSidebar();
   }
