@@ -1,7 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { postData,commentsData } from './Data';
+import { postData,commentsData,groupsData } from './Data';
 import { useState } from 'react';
 
 import Header from './components/Header';
@@ -51,7 +51,7 @@ export default function App() {
       <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       <Header showPost={showPost} closePost={closePost} toggleSidebar={toggleSidebar}/>
       {/* <HomeScreen showPost={showPost} data={postData}  currentPost={currentPost} currentComments={currentComments} getPostInfo={getPostInfo} closePost={closePost} currentMainComment={currentMainComment} currentReplies={currentReplies} getReplies={getReplies} showReplies={showReplies} closeReplies={closeReplies} toggleSidebar={toggleSidebar}/> */}
-      <GroupsScreen />
+      <GroupsScreen groupData={groupsData}/>
       <StatusBar style="auto" />
     </View>
   );

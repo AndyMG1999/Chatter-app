@@ -2,10 +2,10 @@ import {StyleSheet,View,Text} from 'react-native';
 
 import GroupList from '../components/GroupList';
 
-const GroupsScreen = () => {
+const GroupsScreen = ({groupData}) => {
     return (
         <View style={styles.screen}>
-            <GroupList />
+            <GroupList groupData={groupData}/>
         </View>
     );
 };

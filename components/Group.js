@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     groupDetails:{
         fontSize: 20,
         paddingLeft: 5,
-        paddingTop: 5,
+        paddingVertical: 5,   
         color: 'rgba(255,255,255,0.9)',
     },
 });
