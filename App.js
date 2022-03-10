@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { useState } from 'react';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -12,12 +12,16 @@ export default function App() {
 
   return (
     <AppProvider>
+      <SafeAreaProvider>
       <View style={styles.container}>
+        <SafeAreaView style={{flex:1}}>
         <Sidebar />
         <Header />
         <ScreenRouter />
         <StatusBar style="auto" />
+        </SafeAreaView>
       </View>
+      </SafeAreaProvider>
     </AppProvider>
   );
 }
@@ -25,6 +29,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgb(62, 104, 128)',
   },
 });

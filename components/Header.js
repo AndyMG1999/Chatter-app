@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
         shadowRadius: 9.51,
         elevation: 15,
 
-        height: '13%',
-        paddingTop: 30,
+        height: '10%',
+        paddingTop: 5,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',

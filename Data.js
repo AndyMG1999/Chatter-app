@@ -134,4 +134,19 @@ const groupsData = [
     },
 ];
 
+const userLoginData = [
+    {
+        id: 1,
+        username: 'ChatterOfficial',
+        email: 'chatter@gmail.com',
+        password: 'abc123'
+    },
+    {
+        id: 2,
+        username: 'ChatterOfficial',
+        email: 'chatter@gmail.com',
+        password: 'abc123'
+    },
+];
+
 export {postData,commentsData,groupsData};

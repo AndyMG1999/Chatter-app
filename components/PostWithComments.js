@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     commentList:{
         width: '96%',
         alignSelf: 'center',
-        paddingTop: 18,
+        paddingTop: 10,
 
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,

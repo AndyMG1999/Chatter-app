@@ -27,7 +27,7 @@ const SidebarHeader = ({toggleSidebar}) => {
 
 const styles = StyleSheet.create({
     sidebarHeader: {
-        paddingTop: '15%',
+        paddingTop: '5%',
         borderColor: 'white',
         borderBottomWidth: 3,
     },

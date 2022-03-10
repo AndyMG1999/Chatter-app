@@ -11,7 +11,7 @@ const SigninScreen = () => {
                 </View>
                 <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="email" keyboardType='email-address' returnKeyType='next' />
                 <TextInput style={styles.signinInput} placeholderTextColor='grey' placeholder="password" secureTextEntry={true} returnKeyType='go' />
-                <View style={styles.signinButtonContainer}><TouchableOpacity onPress={()=>{}}><Text style={styles.signinButtonText}>Let's Go!</Text></TouchableOpacity></View>
+                <TouchableOpacity onPress={()=>{}} style={styles.signinButtonContainer}><View><Text style={styles.signinButtonText}>Let's Go!</Text></View></TouchableOpacity>
                 <TouchableOpacity><View><Text style={styles.signupButtonText}>Don't have an account? Tap here!</Text></View></TouchableOpacity>
             </View>
         </View>
