@@ -3,9 +3,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import ProfileIcon from './ProfileIcon';
+import { useGlobalContext } from '../context/context';
 
 const SidebarHeader = ({toggleSidebar}) => {
     const iconSize = 60;
+    const {username} = useGlobalContext();
 
     return (
         <LinearGradient
@@ -18,7 +20,7 @@ const SidebarHeader = ({toggleSidebar}) => {
                 <View style={{flexDirection:'row',justifyContent:'flex-end'}}><TouchableOpacity onPress={()=>toggleSidebar()}><MaterialCommunityIcons name='chevron-left' size={iconSize} color='white' /></TouchableOpacity></View>
                 <View style={{flexDirection:'row',alignItems:'baseline'}}>
                 <ProfileIcon iconSize={70}/>
-                <Text style={styles.sidebarTitleText}>Guest</Text>
+                <Text style={styles.sidebarTitleText}>{username? username:'Guest'}</Text>
                 </View>
             </View>
         </LinearGradient>

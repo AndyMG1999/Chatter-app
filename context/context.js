@@ -1,12 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 
-import { postData,commentsData,groupsData } from '../Data';
+import { postData,commentsData,userLoginData,groupsData } from '../Data';
 
 const AppContext = React.createContext();
 const AppProvider = ({children}) => {
   // useState where data will be stored
-  const [username,setUsername] = useState('');
+  const [userId,setUserId] = useState(null);
+  const [username,setUsername] = useState(null);
 
   const [showPost,setShowPost] = useState(false);
   const [showReplies,setShowReplies] = useState(false);
@@ -53,7 +54,7 @@ const AppProvider = ({children}) => {
   }
 
   const switchToProfile = (isSidebar = true) => {
-    if(username == '') return;
+    if(userId == null) return;
     setCurrentPage('PROFILE');
     if(isSidebar) toggleSidebar();
   }
@@ -71,6 +72,26 @@ const AppProvider = ({children}) => {
   const switchToSignin = () => {
       setCurrentPage('SIGNIN');
       toggleSidebar();
+  }
+
+  const attemptLogin = (email,password) => {
+    console.log('attempting\nemail:'+email+"\npassword:"+password);
+    // Check if login data contains a user with the inputted email
+    const existingUser = userLoginData.find((user)=>user.email === email);
+    if(existingUser){
+      // if user exists then checks password, and if correct logs in
+      if(existingUser.password === password) setUserId(existingUser.id);
+      setUsername(existingUser.username);
+      switchToHome();
+    }
+    // return error since user does not exist or password was incorrect
+    console.log('error');
+  }
+
+  const signUserOut = () => {
+    setUserId(null);
+    setUsername(null);
+    switchToSignin();
   }
 
   return (
@@ -96,6 +117,12 @@ const AppProvider = ({children}) => {
         switchToProfile,
         switchToGroups,
         switchToSignin,
+        username,
+        setUsername,
+        userId,
+        setUserId,
+        attemptLogin,
+        signUserOut,
     }}>{children}</AppContext.Provider>
   );
 };

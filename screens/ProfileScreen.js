@@ -1,8 +1,11 @@
 import {StyleSheet,View,Text,ScrollView} from 'react-native';
 
 import ProfileIcon from '../components/ProfileIcon';
+import { useGlobalContext } from '../context/context';
 
 const ProfileScreen = () => {
+    const {username} = useGlobalContext();
+    
     return(
         
         <View style={styles.screen}>
@@ -10,7 +13,7 @@ const ProfileScreen = () => {
             <Text style={styles.profileLabelText}>My Profile</Text>
             <View style={styles.profileHeader}>
                 <ProfileIcon iconSize={90} isSidebar={false}/>
-                <Text style={styles.profileHeaderText}>Guest</Text>
+                <Text style={styles.profileHeaderText}>{username? username:Guest}</Text>
             </View>
             </ScrollView>
         </View>

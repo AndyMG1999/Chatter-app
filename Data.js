@@ -145,7 +145,7 @@ const userLoginData = [
         id: 2,
         username: 'testUser001',
         email: 'test@gmail.com',
-        password: 'password'
+        password: '123'
     },
     {
         id: 3,
@@ -176,4 +176,4 @@ const userInfoData = [
     },
 ];
 
-export {postData,commentsData,groupsData};
+export {postData,commentsData,userLoginData,groupsData};
