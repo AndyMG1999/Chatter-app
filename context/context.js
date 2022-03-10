@@ -75,7 +75,6 @@ const AppProvider = ({children}) => {
   }
 
   const attemptLogin = (email,password) => {
-    console.log('attempting\nemail:'+email+"\npassword:"+password);
     // Check if login data contains a user with the inputted email
     const existingUser = userLoginData.find((user)=>user.email === email);
     if(existingUser){
@@ -83,6 +82,7 @@ const AppProvider = ({children}) => {
       if(existingUser.password === password) setUserId(existingUser.id);
       setUsername(existingUser.username);
       switchToHome();
+      return;
     }
     // return error since user does not exist or password was incorrect
     console.log('error');
