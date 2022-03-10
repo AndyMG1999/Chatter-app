@@ -143,9 +143,36 @@ const userLoginData = [
     },
     {
         id: 2,
-        username: 'ChatterOfficial',
-        email: 'chatter@gmail.com',
-        password: 'abc123'
+        username: 'testUser001',
+        email: 'test@gmail.com',
+        password: 'password'
+    },
+    {
+        id: 3,
+        username: 'testUser002',
+        email: 'test2@gmail.com',
+        password: 'password2'
+    },
+];
+
+const userInfoData = [
+    {
+        userId: 1,
+        dOB: '',
+        cakeDay: '2/01/2022',
+        pronouns: '',
+    },
+    {
+        userId: 2,
+        dOB: '01/01/1983',
+        cakeDay: '3/10/2022',
+        pronouns: 'they/them',
+    },
+    {
+        userId: 3,
+        dOB: '01/01/1983',
+        cakeDay: '3/10/2022',
+        pronouns: 'they/them',
     },
 ];
 
