@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 
-import { postData,commentsData,userLoginData,groupsData } from '../Data';
+import { postData,commentsData,userLoginData,userInfoData,groupsData } from '../Data';
 
 const AppContext = React.createContext();
 const AppProvider = ({children}) => {
   // useState where data will be stored
   const [userId,setUserId] = useState(null);
   const [username,setUsername] = useState(null);
+  const [userProfileImage,setUserProfileImage] = useState(null);
 
   const [showPost,setShowPost] = useState(false);
   const [showReplies,setShowReplies] = useState(false);
@@ -81,6 +82,9 @@ const AppProvider = ({children}) => {
       // if user exists then checks password, and if correct logs in
       if(existingUser.password === password) setUserId(existingUser.id);
       setUsername(existingUser.username);
+      // brings up user info
+      const userInfo = userInfoData.find((user)=> user.userId === existingUser.id);
+      setUserProfileImage(userInfo.profileImageName);
       switchToHome();
       return;
     }
@@ -91,6 +95,7 @@ const AppProvider = ({children}) => {
   const signUserOut = () => {
     setUserId(null);
     setUsername(null);
+    setUserProfileImage(null);
     switchToSignin();
   }
 
@@ -120,6 +125,7 @@ const AppProvider = ({children}) => {
         username,
         setUsername,
         userId,
+        userProfileImage,
         setUserId,
         attemptLogin,
         signUserOut,

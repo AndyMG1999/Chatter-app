@@ -161,19 +161,22 @@ const userInfoData = [
         dOB: '',
         cakeDay: '2/01/2022',
         pronouns: '',
+        profileImageName: 'cute-robot.png',
     },
     {
         userId: 2,
         dOB: '01/01/1983',
         cakeDay: '3/10/2022',
         pronouns: 'they/them',
+        profileImageName: 'default-user-image.png',
     },
     {
         userId: 3,
         dOB: '01/01/1983',
         cakeDay: '3/10/2022',
         pronouns: 'they/them',
+        profileImageName: 'default-user-image.png',
     },
 ];
 
-export {postData,commentsData,userLoginData,groupsData};
+export {postData,commentsData,userLoginData,userInfoData,groupsData};

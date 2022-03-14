@@ -8,9 +8,9 @@ const ProfileIcon = ({iconSize,isSidebar}) => {
             alignSelf: 'baseline',
             borderRadius: iconSize,
             borderWidth: 3,
-            borderColor: 'grey',
+            borderColor: 'white',
             margin: 6,
-            backgroundColor: 'grey',
+            backgroundColor: 'white',
         },
         profileImage: {
             width: iconSize,
@@ -18,13 +18,13 @@ const ProfileIcon = ({iconSize,isSidebar}) => {
             borderRadius: iconSize,
         },
     })
-
-    const {switchToProfile} = useGlobalContext();
-
+    const {switchToProfile,userProfileImage} = useGlobalContext();
+    const displayedProfile = userProfileImage? require('../assets/profile-images/default-user-image.png'):require('../assets/profile-images/default-user-image.png');
+    
     return(
         <View style={styles.userIconBackground}>
             <TouchableOpacity onPress={()=>{switchToProfile(isSidebar)}}>
-                <Image resizeMode='cover' style={styles.profileImage} source={{uri:'https://cdn.landesa.org/wp-content/uploads/default-user-image.png'}} />
+                <Image resizeMode='cover' style={styles.profileImage} source={displayedProfile} />
             </TouchableOpacity>
         </View>
     );
