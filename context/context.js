@@ -9,6 +9,7 @@ const AppProvider = ({children}) => {
   const [userId,setUserId] = useState(null);
   const [username,setUsername] = useState(null);
   const [userProfileImage,setUserProfileImage] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
 
   const [showPost,setShowPost] = useState(false);
   const [showReplies,setShowReplies] = useState(false);
@@ -20,6 +21,11 @@ const AppProvider = ({children}) => {
   const [currentPost,setCurrentPost] = useState([]);
   const [currentComments,setCurrentComments] = useState([]);
   const [currentReplies,setCurrentReplies] = useState([]);
+
+  const getUserProfileInfo = (id=userId) => {
+    const currentProfile = userInfoData.find((user) => user.userId === id);
+    if(currentProfile) setUserInfo(currentProfile);
+  }
 
   const getPostInfo = (postId) => {
     const newPost = postData.filter((post)=>post.id === postId);
