@@ -9,9 +9,9 @@ const ProfileIcon = ({iconSize,isSidebar}) => {
             alignSelf: 'baseline',
             borderRadius: iconSize,
             borderWidth: 3,
-            borderColor: 'white',
+            borderColor: 'rgba(250,250,250,0.8)',
             margin: 6,
-            backgroundColor: 'white',
+            backgroundColor: 'rgba(250,250,250,0.8)',
         },
         profileImage: {
             width: iconSize,
