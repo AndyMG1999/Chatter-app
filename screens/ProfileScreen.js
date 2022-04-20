@@ -1,4 +1,5 @@
 import {StyleSheet,View,Text,ScrollView} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import ProfileIcon from '../components/ProfileIcon';
 import { useGlobalContext } from '../context/context';
@@ -10,7 +11,13 @@ const ProfileScreen = () => {
     return(
         
         <View style={styles.screen}>
-            <ScrollView>
+            <ScrollView style={styles.scrollview}>
+            <LinearGradient
+            // Background Linear Gradient
+            colors={['rgba(255, 77, 0, 1)', 'rgba(255, 234, 0, 0.25)']}
+            start={{x:0,y:0}}
+            end={{x:1,y:1}}
+            >
             <View style={styles.profileHorizontal}>
                 <ProfileIcon iconSize={90} isSidebar={false}/>
                 <Text style={styles.profileHeaderText}>{username? username:Guest}</Text>
@@ -27,6 +34,7 @@ const ProfileScreen = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id.
             </Text>
             <Text style={styles.profileMediumText}>Recent Comments</Text>
+            </LinearGradient>
             </ScrollView>
         </View>
     );
@@ -36,6 +44,10 @@ const styles = StyleSheet.create({
     screen:{
         flex: 1,
         backgroundColor: 'rgb(25, 45, 56)',
+    },
+    scrollview:{
+        alignSelf: 'center',
+        width: '96%',
     },
     profileHorizontal:{
         flexDirection: 'row',
