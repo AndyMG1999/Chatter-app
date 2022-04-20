@@ -15,10 +15,13 @@ const ProfileScreen = () => {
                 <ProfileIcon iconSize={90} isSidebar={false}/>
                 <Text style={styles.profileHeaderText}>{username? username:Guest}</Text>
             </View>
-            <Text style={styles.profileMediumText}>Pronouns</Text>
             <View style={styles.profileHorizontal}>
-                <MaterialCommunityIcons name='cake-variant' size={45} color={'white'} />
-                <Text style={styles.profileMediumText}>Cake Day</Text>
+                <MaterialCommunityIcons name='gender-transgender' size={40} color={'orange'} />
+                <Text style={styles.profileMediumText}>XX/XXX (Pronouns)</Text>
+            </View>
+            <View style={styles.profileHorizontal}>
+                <MaterialCommunityIcons name='cake-variant' size={40} color={'orange'} />
+                <Text style={styles.profileMediumText}>MM/DD/YYYY (Cake Day)</Text>
             </View>
             <Text style={styles.profileSmallText}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id.
