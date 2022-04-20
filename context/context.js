@@ -25,6 +25,7 @@ const AppProvider = ({children}) => {
   const getUserProfileInfo = (id=userId) => {
     const currentProfile = userInfoData.find((user) => user.userId === id);
     if(currentProfile) setUserInfo(currentProfile);
+    else setUserInfo(null);
   }
 
   const getPostInfo = (postId) => {
